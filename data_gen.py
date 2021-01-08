@@ -15,8 +15,8 @@ def powerlaw(alpha , z, norm):
         return val 
     return internal
 
-alpha = np.random.uniform(low = 0.5 , high= 2.5 , size = 100000)
-z_val = np.random.uniform(low = 0.5 , high= 2.5 , size = 100000)
+alpha = np.random.uniform(low = 0.5 , high= 2.5 , size = 10000)
+z_val = np.random.uniform(low = 0.5 , high= 2.5 , size = 10000)
 norm  = 1e-7
 x = np.linspace(0.1,10,128)
 
@@ -30,9 +30,9 @@ for a, z in zip(alpha, z_val):
 
 data = np.asarray(data)
 param = np.asarray(param)
-np.savetxt('data.csv' , data)
-np.savetxt('params.csv' , param)
+np.savetxt('data/data.csv' , data)
+np.savetxt('data/params.csv' , param)
 data_log = np.log(data)
 data_log_norm = (data_log - np.mean(data_log))/np.var(data_log)
-np.savetxt('data_log_norm.csv' , data_log_norm)
+np.savetxt('data/data_log_norm.csv' , data_log_norm)
 
