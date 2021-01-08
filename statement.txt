@@ -1,0 +1,22 @@
+Problem statement - 
+    Given dataset : [x(i) , y(i)] 
+        the dependence of x(i) on y(i) is governed by J parameters [a(j)] .
+        Final task - given [x(i) , y(i)] we need to predict values for [a(j)]
+
+        training dataset : [x(i) , y(j)] , [a(j)] 
+                            N such set (N dataset)
+
+
+Actually [x(i), y(i)] is the spectrum from some astronomical source, where
+x(i) :  value of flux 
+y(i) : energy channels [think of it as some numbers representing energy , usually we have 256 such channels and hence 256 values for x(i)]
+
+If we have data such that x(i) for all 256 channels, and the channels are distributed uniformy for each dataset , then we could altogether drop y[i] and use the following dataset for training and prediction of arameters a[i] 
+     (x[i] , a[j]) .
+But in actual observation we rarely have energy value corresponding to all energy channels . Hence we treat (x,y) as 2D data and redefine the problem in a similar way as to training on image with certain pparts missing.
+
+We will try to use CNN for estimation of parameters assuming (x,y) as a sparse 2d image.
+
+
+
+#Our next attemp will be to try to find a best interpolator. 
