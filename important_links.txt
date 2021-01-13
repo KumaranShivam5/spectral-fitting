@@ -1,0 +1,5 @@
+Overleaf link for the report 
+https://www.overleaf.com/read/jrrymznjwpgk
+
+Github repository :
+https://github.com/KumaranShivam5/spectral-fitting
